@@ -15,7 +15,7 @@ arm : 生成标准
 	onCreate()  onState()  onResume()  onPause()  onStop()  onDestroy() onRestart() 
 
 活动的四种启动模式：
-		standard  singleTop  singleTask  singleInstance
+		standard  singleTop  singleTask  singleInstance 
 
 standard : 在每次启动活动都会创建一个新的活动实例
 
