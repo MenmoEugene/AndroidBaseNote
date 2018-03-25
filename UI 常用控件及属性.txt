@@ -18,7 +18,7 @@ ImageView
 ProgressBar(进度条)
 	setVisibility(){
 					1. View.VISIBLE
-					2. View.INVISIBLE  
+					2. View.INVISIBLE 
 					3. View.GONE 
 			
 gravity：用于指定文件在控件中的对齐方式
