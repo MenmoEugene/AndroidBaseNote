@@ -43,5 +43,5 @@ protected void onCreate(Bundle saveInstanceState)
 setContentView(R.layout.cactivity_main);
 
 安装包的生成路径：
-build -- generated -- intermediates -- outputs -- apk -- debug -- xxx.apk
+build -- generated -- intermediates -- outputs -- apk -- debug -- xxx.apk 
 
