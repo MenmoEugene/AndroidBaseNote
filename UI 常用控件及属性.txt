@@ -16,6 +16,7 @@ ImageView
 	src
 
 ProgressBar(½ø¶ÈÌõ)
+
 	setVisibility(){
 					1. View.VISIBLE
 					2. View.INVISIBLE 
