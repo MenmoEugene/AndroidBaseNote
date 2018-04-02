@@ -8,12 +8,11 @@ plantform : 开发的平台
 intel : 生成cpu 主要针对笔记本和PC机
 arm : 生成标准
 
-
 活动状态：
 		运行--> 暂停--> 停止--> 销毁 
 
 活动的生存期：
-	onCreate()  onState()  onResume()  onPause()  onStop()  onDestroy() onRestart()
+	onCreate()  onState()  onResume()  onPause()  onStop()  onDestroy() onRestart() 
 
 活动的四种启动模式：
 		standard  singleTop  singleTask  singleInstance
