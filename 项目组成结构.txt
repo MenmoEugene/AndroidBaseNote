@@ -40,7 +40,6 @@ Toast是Android 系统提供的一种非常友好的提醒方式，格式如下：
 当活动启动时就会执行onCreate()方法
 protected void onCreate(Bundle saveInstanceState)
 
-
 设置activity 的内容，内容来源于布局
 setContentView(R.layout.cactivity_main);
 
