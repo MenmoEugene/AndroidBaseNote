@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,9 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private OneFragment oneFragment;
     private TwoFragment twoFragment;
     private ThreeFragment threeFragment;
-    private FouthFragment fouthFragmen;
+    private FouthFragment fouthFragment;
     private List<Fragment> mFragmentList = new ArrayList<Fragment>();
     private FragmentAdapter mFragmentAdapter;
+
 
     String[] items = new String[]{"阅读", "我的书籍", "发现", "我的"};
 
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initViews();
 
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         vp.setOffscreenPageLimit(4);//ViewPager的缓存为4帧
         vp.setAdapter(mFragmentAdapter);
         vp.setCurrentItem(0);//初始设置ViewPager选中第一帧
-        item_read.setTextColor(Color.parseColor("#66CDAA"));
+        item_read.setTextColor(Color.parseColor("#00CCFF"));
 
         //ViewPager的监听事件
         vp.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onPageSelected(int position) {
                 /*此方法在页面被选中时调用*/
-                item_read.setText(items[position]);
+//                item_books.setText(items[position]);
                 changeTextColor(position);
             }
 
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 初始化布局View
      */
     private void initViews() {
+
         item_read = (TextView) findViewById(R.id.item_read);
         item_books = (TextView) findViewById(R.id.item_my_books);
         item_find = (TextView) findViewById(R.id.item_find);
@@ -82,12 +82,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         oneFragment = new OneFragment();
         twoFragment = new TwoFragment();
         threeFragment = new ThreeFragment();
-        fouthFragmen = new FouthFragment();
+        fouthFragment = new FouthFragment();
+
         //给FragmentList添加数据
         mFragmentList.add(oneFragment);
         mFragmentList.add(twoFragment);
         mFragmentList.add(threeFragment);
-        mFragmentList.add(fouthFragmen);
+        mFragmentList.add(fouthFragment);
     }
 
     /**
@@ -110,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
 
     public class FragmentAdapter extends FragmentPagerAdapter {
 
@@ -138,27 +138,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void changeTextColor(int position) {
         if (position == 0) {
-            item_read.setTextColor(Color.parseColor("#66CDAA"));
+            item_read.setTextColor(Color.parseColor("#00CCFF"));
             item_books.setTextColor(Color.parseColor("#000000"));
             item_find.setTextColor(Color.parseColor("#000000"));
             item_mine.setTextColor(Color.parseColor("#000000"));
         } else if (position == 1) {
-            item_books.setTextColor(Color.parseColor("#66CDAA"));
+            item_books.setTextColor(Color.parseColor("#00CCFF"));
             item_read.setTextColor(Color.parseColor("#000000"));
             item_find.setTextColor(Color.parseColor("#000000"));
             item_mine.setTextColor(Color.parseColor("#000000"));
         } else if (position == 2) {
-            item_find.setTextColor(Color.parseColor("#66CDAA"));
+            item_find.setTextColor(Color.parseColor("#00CCFF"));
             item_read.setTextColor(Color.parseColor("#000000"));
             item_books.setTextColor(Color.parseColor("#000000"));
             item_mine.setTextColor(Color.parseColor("#000000"));
         } else if (position == 3) {
-            item_mine.setTextColor(Color.parseColor("#66CDAA"));
+            item_mine.setTextColor(Color.parseColor("#00CCFF"));
             item_read.setTextColor(Color.parseColor("#000000"));
             item_books.setTextColor(Color.parseColor("#000000"));
             item_find.setTextColor(Color.parseColor("#000000"));
         }
     }
+
 }
 
 
