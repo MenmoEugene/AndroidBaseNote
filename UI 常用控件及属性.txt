@@ -42,6 +42,7 @@ ListView(列表控件【垂直方向】)
 
 RecyclerView (可以设置横纵方向滚动的列表控件，弥补了ListView的各种不足)
 
+
 它提供了三种布局排列：
 	LinearLayoutManager
 	GridLayoutManager：用于实现网格布局
