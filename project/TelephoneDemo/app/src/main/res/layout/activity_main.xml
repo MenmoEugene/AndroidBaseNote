@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.menmo.demo.telephone.MainActivity">
+
+<!--在相对布局中添加一个编辑文本控件-->
+    <!--给这个编辑文件添加一个ID，名为et_phone-->
+    <!--设置编辑文本的宽为match_parent(充斥整个父窗体)和高wrap_content(包裹整个控件内容)-->
+    <!--设置这个编辑文本的输入类型为phone-->
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone" />
+<!--在相对布局中添加一个按钮控件-->
+    <!--给按钮控件添加一个名为btn_call的ID-->
+    <!--设置按钮控件的宽和高-->
+    <!--设置按钮控件的文本内容为“拨打电话”-->
+    <!--设置这个按钮控件位置在ID名为et_phone的下方-->
+    <!--设置按钮控件在父窗体的左边-->
+    <!--设置按钮控件在父窗体的开始位置-->
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/call_phone"
+        android:layout_below="@id/et_phone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
