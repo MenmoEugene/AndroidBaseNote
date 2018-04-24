@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">文件保存与读取</string>
+    <string name="file_name">文件名称</string>
+    <string name="file_content">文件内容</string>
+    <string name="save">保存</string>
+    <string name="success">保存完成</string>
+    <string name="failed">保存失败</string>
+</resources>
