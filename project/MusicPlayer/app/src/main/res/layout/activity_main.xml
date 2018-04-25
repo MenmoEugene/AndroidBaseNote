@@ -7,41 +7,47 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/file_name"
-       />
+        android:text="@string/file_name" />
+
     <EditText
         android:id="@+id/filename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:text="mylove.mp3" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/paly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_play"
-            android:onClick="mediapaly"/>
+            android:onClick="mediaplay"
+            android:text="@string/btn_play" />
+
         <Button
             android:id="@+id/pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_pause"
-            android:onClick="mediapaly"/>
+            android:onClick="mediaplay"
+            android:text="@string/btn_pause" />
+
         <Button
             android:id="@+id/stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_stop"
-            android:onClick="mediapaly"/>
+            android:onClick="mediaplay"
+            android:text="@string/btn_stop" />
+
         <Button
             android:id="@+id/repaly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_repalay"
-            android:onClick="mediapaly"/>
+            android:onClick="mediaplay"
+            android:text="@string/btn_repalay" />
     </LinearLayout>
 </LinearLayout>
