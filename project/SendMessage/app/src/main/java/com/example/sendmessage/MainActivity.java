@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,8 +36,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             //通过控件名称获得对应的文本转成字符串，并命一个新的名称
-            String number = numberText.getText().toString();
+            String number = numberText.getText().toString().trim();
             String content = contentText.getText().toString();
+            if (TextUtils.isEmpty(number) || (TextUtils.isEmpty(content))) {
+                Toast.makeText(MainActivity.this, "号码或内容不能为空", Toast.LENGTH_SHORT).show();
+                return;
+            }
             //获得一个短信管理器，调用它的getDefault方法 取得它的默认管理器对象
             SmsManager manager = SmsManager.getDefault();
             //按照短信限制字数拆分成多条短信
