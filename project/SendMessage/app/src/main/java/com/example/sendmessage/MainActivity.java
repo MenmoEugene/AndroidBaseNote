@@ -1,7 +1,5 @@
 package com.example.sendmessage;
 
-import android.app.PendingIntent;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
