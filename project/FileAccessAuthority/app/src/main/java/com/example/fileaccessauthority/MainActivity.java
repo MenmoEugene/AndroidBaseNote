@@ -1,4 +1,4 @@
-package com.example.savefileinphone;
+package com.example.fileaccessauthority;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.savefileinphone.service.LoginService;
+import com.example.fileaccessauthority.service.LoginService;
 
 import java.util.Map;
 
