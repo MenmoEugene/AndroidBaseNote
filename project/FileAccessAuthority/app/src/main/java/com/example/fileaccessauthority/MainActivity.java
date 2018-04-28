@@ -7,11 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.fileaccessauthority.service.LoginService;
 
-import java.util.Map;
 
 public class MainActivity extends Activity {
 
@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     private EditText et_username;
     private EditText et_password;
     private CheckBox cb;
+    private RadioGroup rg_mode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +28,7 @@ public class MainActivity extends Activity {
         et_username = (EditText) findViewById(R.id.user_name);
         et_password = (EditText) findViewById(R.id.password);
         cb = (CheckBox) findViewById(R.id.chenckbox);
-
-        //检查是否有保存的用户名和密码数据,如果有则回显出来
-        Map<String, String> map = LoginService.getSaveUserInfo(this);
-        if (map != null) {
-            et_username.setText(map.get("username"));
-            et_password.setText(map.get("password"));
-        }
+        rg_mode = (RadioGroup) findViewById(R.id.rg_mode);
 
     }
 
@@ -47,7 +42,17 @@ public class MainActivity extends Activity {
             if (cb.isChecked()) {
                 //保存用户名密码
                 Log.i(TAG, "需要保存用户名和密码.");
-                boolean result = LoginService.saveUserInfo(this, username, password);
+                boolean result = false;
+                int id = rg_mode.getCheckedRadioButtonId();
+                switch (id) {
+                    case R.id.rd_private:
+                        result = LoginService.saveUserInfo(this, username, password, 1);
+                        break;
+                    case R.id.rd_public:
+                        result = LoginService.saveUserInfo(this, username, password, 2);
+                        break;
+                }
+
                 if (result) {
                     Toast.makeText(MainActivity.this, "保存用户信息成功", Toast.LENGTH_SHORT).show();
                 }
