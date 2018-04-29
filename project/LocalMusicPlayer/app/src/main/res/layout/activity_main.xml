@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="mylove.mp3" />
+        android:text="L0ve So Soft.mp3" />
 
     <LinearLayout
         android:layout_width="match_parent"

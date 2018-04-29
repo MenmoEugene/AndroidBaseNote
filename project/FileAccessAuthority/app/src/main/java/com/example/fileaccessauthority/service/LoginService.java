@@ -1,4 +1,4 @@
-package com.example.fileaccessauthority.service;
+﻿package com.example.fileaccessauthority.service;
 
 import android.content.Context;
 
@@ -21,7 +21,7 @@ public class LoginService {
      * @param password 密码
      * @return true 保存成功 false 保存失败
      * @getCacheDir() 缓存目录
-     * @param mode 1私有 2可读 3 可写 4共有
+     * @param mode 1私有 2追加
      */
 
     public static boolean saveUserInfo(Context context, String username, String password, int mode) {

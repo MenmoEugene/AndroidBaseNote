@@ -37,10 +37,10 @@ public class MainActivity extends Activity {
     public void mediaplay(View v) {
         switch (v.getId()) {
             case R.id.paly:
-                String filename = nameText.getText().toString();
-                File audio = new File(Environment.getExternalStorageDirectory(), filename);
+//                String filename = nameText.getText().toString();
+                File audio = new File("/mnt/sdcard/Love so soft.mp4");
                 if (audio.exists()) {
-                    path = audio.getPath();
+                    path = audio.getAbsolutePath();
                     play();
                 } else {
                     path = null;
