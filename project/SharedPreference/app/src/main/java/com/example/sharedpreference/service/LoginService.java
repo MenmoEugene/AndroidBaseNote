@@ -28,6 +28,6 @@ public class LoginService {
         editor.putBoolean("open", true);
         editor.putInt("count", 23);
         editor.putFloat("pi", 3.141592653383679f);
-        editor.commit();
+        editor.apply();
     }
 }
