@@ -25,9 +25,9 @@ public class LoginService {
         editor.putString("password", password);
         //类似于数据库的事务，保证数据同时提交成功
 
-        editor.putBoolean("open", true);
-        editor.putInt("count", 23);
-        editor.putFloat("pi", 3.141592653383679f);
-        editor.apply();
+//        editor.putBoolean("open", true);
+//        editor.putInt("count", 23);
+//        editor.putFloat("pi", 3.141592653383679f);
+        editor.commit();
     }
 }

@@ -35,25 +35,30 @@ public class MainActivity extends Activity {
         et_password.setText(password);
     }
 
+    /**
+     * 登录
+     * @param v
+     */
     public void Btnlogin(View v) {
         String username = et_username.getText().toString().trim();
         String password = et_password.getText().toString();
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
-            Toast.makeText(MainActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "用户名或密码不能为空",
+                    Toast.LENGTH_SHORT).show();
         } else {
             //判断是否保存密码
             if (cb.isChecked()) {
                 //保存用户名密码
                 Log.i(TAG, "需要保存用户名和密码.");
                 LoginService.saveUserInfo(this, username, password);
-                Toast.makeText(MainActivity.this, "保存用户信息成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "保存用户信息成功", Toast.LENGTH_SHORT).show();
 
             }
             //登陆发送消息到服务器，服务器验证是否正确
             if ("xumanli".equals(username) && "1026".equals(password)) {
-                Toast.makeText(MainActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(MainActivity.this, "登陆失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "登陆失败", Toast.LENGTH_SHORT).show();
             }
         }
 
