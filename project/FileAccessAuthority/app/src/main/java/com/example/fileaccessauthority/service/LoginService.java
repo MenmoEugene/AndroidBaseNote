@@ -32,6 +32,8 @@ public class LoginService {
                     fos = context.openFileOutput("private.txt", Context.MODE_PRIVATE);
                 case 2:
                     fos = context.openFileOutput("private.txt", Context.MODE_APPEND);
+                default:
+                    break;
             }
             //username---password
             fos.write((username + "---" + password + "\r\n").getBytes());
