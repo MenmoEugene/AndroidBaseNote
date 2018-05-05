@@ -51,6 +51,8 @@ public class MainActivity extends Activity {
                     case R.id.rd_public:
                         result = LoginService.saveUserInfo(this, username, password, 2);
                         break;
+                    default:
+                        break;
                 }
 
                 if (result) {
